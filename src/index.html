@@ -12,13 +12,26 @@
           <h2>Search for a Portland doctor here:</h2>
         </div>
         <div class="card-body">
-          <form>
-            <div class="form-group">
-              <label for="condition">Enter a medical condition</label>
-              <input type="text" class="form-control" id="condition">
+          <div class="row">
+            <div class="col-md-6">
+              <form class="condition">
+                <div class="form-group">
+                  <label for="condition">Find a doctor based on condition</label>
+                  <input type="text" class="form-control" id="condition">
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+              </form>
             </div>
-            <button type="submit" class="btn btn-success">Submit</button>
-          </form>
+            <div class="col-md-6">
+              <form class="name">
+                <div class="form-group">
+                  <label for="name">Find doctor by name</label>
+                  <input type="text" class="form-control" id="name">
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
       <div class="output">
