@@ -1,0 +1,667 @@
+{
+  "meta": {
+    "data_type": "array",
+    "item_type": "Doctor",
+    "total": 1,
+    "count": 1,
+    "skip": 0,
+    "limit": 10
+  },
+
+//response.data
+  "data": [
+    {
+    //response.data[i]
+      "practices": [
+        {
+          "location_slug": "or-portland",
+          "lat": 45.499437,
+          "lon": -122.689344,
+          "uid": "79db813201f9e5870830ae7904e29584",
+          "name": "Depatment Of Anesthesiology And Perioperative Medicine",
+          "accepts_new_patients": true,
+          "insurance_uids": [
+            "uhcwestformerlypacificare-pacificarehmo",
+            "firstchoice-firstchoice",
+            "multiplan-phcsppo",
+            "multiplan-phcsppokaiser",
+            "healthnet-healthnetorppo",
+            "multiplan-multiplanppo",
+            "aetna-aetnamanagedchoiceposopenaccess",
+            "cigna-cignappo",
+            "cigna-cignaopenaccessplus",
+            "providencehealthsystem-providencepreferredppo",
+            "bcbsbluecard-bcbsbluecardppo",
+            "providencehealthsystem-providencepersonaloption",
+            "aetna-aetnachoiceposii",
+            "aetna-aetnasignatureadministratorsppo",
+            "healthnet-healthnetindividualfamilyppohix",
+            "anthem-blueviewvision",
+            "premerabcbs-premeraheritagesignaturehix",
+            "premerabcbs-lifewiseconnecthix",
+            "medicaid-medicaid",
+            "medicare-medicare",
+            "aetna-aetnamdbronzesilverandgoldhmo",
+            "healthnet-bluegoldhmo",
+            "healthnet-hmoexcelcaresilvernetwork",
+            "healthnet-hmoexcelcaresilvernetworkmedicarecob",
+            "pacificsourcehealthplans-pacificsourcepreferredpsn",
+            "regencebluecrossblueshieldoforegon-regenceorpreferredprovidernetwork",
+            "odshealthplan-odsnetwork",
+            "premerabluecross-premeraheritageheritageplus1",
+            "premerabluecross-premeraheritagesignature",
+            "gwhcigna-greatwestppo",
+            "unitedhealthcare-uhcchoicepluspos",
+            "unitedhealthcare-uhcnavigatehmo",
+            "unitedhealthcare-uhcnavigatepos",
+            "unitedhealthcare-uhcoptionsppo",
+            "firsthealthcoventryhealthcare-firsthealthppo"
+          ],
+          "visit_address": {
+            "city": "Portland",
+            "lat": 45.499437,
+            "lon": -122.689344,
+            "state": "OR",
+            "state_long": "Oregon",
+            "street": "3181 SW Sam Jackson Park Rd",
+            "zip": "97239"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "5034949000",
+              "type": "landline"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ]
+        }
+      ],
+      "educations": [],
+      "profile": {
+        "first_name": "Joshua",
+        "middle_name": "Laurence",
+        "last_name": "Johnson",
+        "slug": "joshua-johnson",
+        "title": "MD",
+        "image_url": "https://asset1.betterdoctor.com/assets/general_doctor_male.png",
+        "gender": "male",
+        "languages": [
+          {
+            "name": "English",
+            "code": "en"
+          }
+        ],
+        "bio": "Dr. Joshua Johnson, MD sees patients in Newberg, Oregon and Portland, Oregon, specializing in child & adolescent psychiatry, clinical neurophysiology, neurology, chiropractic neurology, neurology physical therapy, psychiatry, psychiatry & neurology behavioral neurology & neuropsychiatry, psychiatry & neurology diagnostic neuroimaging, psychiatry & neurology forensic psychiatry, psychiatry & neurology hospice and palliative medicine, psychiatry & neurology psychosomatic medicine, and psychiatry & neurology pain medicine.\n\nDr. Johnson is licensed to treat patients in Oregon.\n\nDr. Johnson has successfully passed a background check including a medical license verification (active) and screening for malpractice history (none found)."
+      },
+      "ratings": [],
+      "insurances": [
+        {
+          "insurance_plan": {
+            "uid": "uhcwestformerlypacificare-pacificarehmo",
+            "name": "Pacificare HMO",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "unitedhealthcare",
+            "name": "United Healthcare"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "firstchoice-firstchoice",
+            "name": "First Choice",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "firstchoicehealth",
+            "name": "First Choice Health"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "multiplan-phcsppo",
+            "name": "PHCS PPO",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "multiplan",
+            "name": "Multiplan"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "multiplan-phcsppokaiser",
+            "name": "PHCS PPO - Kaiser",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "multiplan",
+            "name": "Multiplan"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "healthnet-healthnetorppo",
+            "name": "Health Net OR PPO",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "healthnet",
+            "name": "Health Net"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "multiplan-multiplanppo",
+            "name": "Multiplan PPO",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "multiplan",
+            "name": "Multiplan"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "aetna-aetnamanagedchoiceposopenaccess",
+            "name": "Aetna Managed Choice POS Open Access",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "aetna",
+            "name": "Aetna"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "cigna-cignappo",
+            "name": "CIGNA PPO",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "cigna",
+            "name": "Cigna"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "cigna-cignaopenaccessplus",
+            "name": "CIGNA Open Access Plus",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "cigna",
+            "name": "Cigna"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "providencehealthsystem-providencepreferredppo",
+            "name": "Providence Preferred PPO",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "providencehealthservices",
+            "name": "Providence Health  Services"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "bcbsbluecard-bcbsbluecardppo",
+            "name": "BCBS Blue Card PPO",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "bcbs",
+            "name": "BCBS"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "providencehealthsystem-providencepersonaloption",
+            "name": "Providence Personal Option",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "providencehealthservices",
+            "name": "Providence Health  Services"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "aetna-aetnachoiceposii",
+            "name": "Aetna Choice POS II",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "aetna",
+            "name": "Aetna"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "aetna-aetnasignatureadministratorsppo",
+            "name": "Aetna Signature Administrators PPO",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "aetna",
+            "name": "Aetna"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "healthnet-healthnetindividualfamilyppohix",
+            "name": "Health Net Individual  Family - PPO  HIX",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "healthnet",
+            "name": "HealthNet"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "anthem-blueviewvision",
+            "name": "Blue View Vision",
+            "category": [
+              "vision"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "anthembluecross",
+            "name": "BCBS"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "premerabcbs-premeraheritagesignaturehix",
+            "name": "Premera Heritage Signature - HIX",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "premerabluecrossblueshield",
+            "name": "BCBS"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "premerabcbs-lifewiseconnecthix",
+            "name": "LifeWise Connect - HIX",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "premerabluecrossblueshield",
+            "name": "BCBS"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "medicaid-medicaid",
+            "name": "Medicaid",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "medicaid",
+            "name": "Medicaid"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "medicare-medicare",
+            "name": "Medicare",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "medicare",
+            "name": "Medicare"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "aetna-aetnamdbronzesilverandgoldhmo",
+            "name": "MD Bronze Silver  Gold - HMO",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "aetna",
+            "name": "Aetna"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "healthnet-bluegoldhmo",
+            "name": "Blue  Gold - HMO",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "healthnet",
+            "name": "HealthNet"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "healthnet-hmoexcelcaresilvernetwork",
+            "name": "HMO - ExcelCare  Silver Network",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "healthnet",
+            "name": "HealthNet"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "healthnet-hmoexcelcaresilvernetworkmedicarecob",
+            "name": "HMO - ExcelCare  Silver Network Medicare COB",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "healthnet",
+            "name": "HealthNet"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "pacificsourcehealthplans-pacificsourcepreferredpsn",
+            "name": "PacificSource Preferred PSN",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "pacificsourcehealthplans",
+            "name": "PacificSource Health Plans"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "regencebluecrossblueshieldoforegon-regenceorpreferredprovidernetwork",
+            "name": "Regence OR Preferred Provider Network",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "bcbs",
+            "name": "BCBS"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "odshealthplan-odsnetwork",
+            "name": "ODS Network",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "odshealthplan",
+            "name": "ODS Health Plan"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "premerabluecross-premeraheritageheritageplus1",
+            "name": "Premera Heritage  Heritage Plus 1",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "bcbs",
+            "name": "BCBS"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "premerabluecross-premeraheritagesignature",
+            "name": "Premera Heritage Signature",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "bcbs",
+            "name": "BCBS"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "gwhcigna-greatwestppo",
+            "name": "Great West PPO",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "cigna",
+            "name": "Cigna"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "unitedhealthcare-uhcchoicepluspos",
+            "name": "UHC Choice Plus POS",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "unitedhealthcare",
+            "name": "United Healthcare"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "unitedhealthcare-uhcnavigatehmo",
+            "name": "UHC Navigate HMO",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "unitedhealthcare",
+            "name": "United Healthcare"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "unitedhealthcare-uhcnavigatepos",
+            "name": "UHC Navigate POS",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "unitedhealthcare",
+            "name": "United Healthcare"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "unitedhealthcare-uhcoptionsppo",
+            "name": "UHC Options PPO",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "unitedhealthcare",
+            "name": "United Healthcare"
+          }
+        },
+        {
+          "insurance_plan": {
+            "uid": "firsthealthcoventryhealthcare-firsthealthppo",
+            "name": "First Health PPO",
+            "category": [
+              "medical"
+            ]
+          },
+          "insurance_provider": {
+            "uid": "aetna",
+            "name": "Aetna"
+          }
+        }
+      ],
+      "specialties": [
+        {
+          "uid": "neurology-chiropractor",
+          "name": "Chiropractic Neurology",
+          "description": "Specializes in alternartive therapy of muscles, bones, and joints.",
+          "category": "medical",
+          "actor": "Neurology Chiropractor",
+          "actors": "Neurology Chiropractors"
+        },
+        {
+          "uid": "psychiatry-neurology-behavioral-neurology-neuropsychiatry",
+          "name": "Psychiatry & Neurology Behavioral Neurology & Neuropsychiatry",
+          "description": "Behavioral Neurology & Neuropsychiatry is a medical subspecialty involving the diagnosis and treatment of neurologically based behavioral issues.",
+          "category": "medical",
+          "actor": "Psychiatry & Neurology Behavioral Neurology & Neuropsychiatry",
+          "actors": "Psychiatry & Neurology Behavioral Neurology & Neuropsychiatries"
+        },
+        {
+          "uid": "psychiatry-neurology-diagnostic-neuroimaging",
+          "name": "Psychiatry & Neurology Diagnostic Neuroimaging",
+          "description": "A licensed physician, who has completed a residency program in Neurology, and who has additional training, experience, and competence in the standards of performance and interpretation of Magnetic Resonance Imaging (MRI / MRA) of the head, spine, and peripheral nerves, and Computed Tomography (CT) of the head and spine. Physicians are trained in the administration of contrast media and the recognition and treatment of adverse reactions to contrast media. Neuroimaging training encompasses thorough knowledge of clinical neurology, neurophysiology, neuroanatomy, neurochemistry, neuropharmacology, and dynamics of cerebrospinal fluid circulation.  Physicians possess special expertise in the technical aspects and clinical applications of each of the modalities and techniques of neuroimaging.",
+          "category": "medical",
+          "actor": "Psychiatry & Neurology Diagnostic Neuroimaging",
+          "actors": "Psychiatry & Neurology Diagnostic Neuroimagings"
+        },
+        {
+          "uid": "psychiatry-neurology-forensic-psychiatry",
+          "name": "Psychiatry & Neurology Forensic Psychiatry",
+          "description": "Forensic Psychiatry is a subspecialty with psychiatric focus on interrelationships with civil, criminal and administrative law, evaluation and specialized treatment of individuals involved with the legal system, incarcerated in jails, prisons, and forensic psychiatry hospitals.",
+          "category": "medical",
+          "actor": "Psychiatry & Neurology Forensic Psychiatry",
+          "actors": "Psychiatry & Neurology Forensic Psychiatries"
+        },
+        {
+          "uid": "psychiatry-neurology-hospice-and-palliative-medicine",
+          "name": "Psychiatry & Neurology Hospice and Palliative Medicine",
+          "description": "A psychiatrist or neurologist with special knowledge and skills to prevent and relieve the suffering experienced by patients with life-limiting illnesses. This specialist works with an interdisciplinary hospice or palliative care team to maximize quality of life while addressing physical, psychological, social and spiritual needs of both patient and family throughout the course of the disease, through the dying process, and beyond for the family.  This specialist has expertise in the assessment of patients with advanced disease; the relief of distressing symptoms; the coordination of interdisciplinary patient and family-centered care in diverse venues; the use of specialized care systems including hospice; the management of the imminently dying patient; and legal and ethical decision making in end-of-life care.",
+          "category": "medical",
+          "actor": "Psychiatry & Neurology Hospice and Palliative Medicine",
+          "actors": "Psychiatry & Neurology Hospice and Palliative Medicines"
+        },
+        {
+          "uid": "neurologist",
+          "name": "Neurology",
+          "description": "Specializes in the brain and nervous system.",
+          "category": "medical",
+          "actor": "Neurologist",
+          "actors": "Neurologists"
+        },
+        {
+          "uid": "clinical-neurophysiologist",
+          "name": "Clinical Neurophysiology",
+          "description": "Specializes in nervous system disorders.",
+          "category": "medical",
+          "actor": "Clinical Neurophysiologist",
+          "actors": "Clinical Neurophysiologists"
+        },
+        {
+          "uid": "psychiatry-neurology-psychosomatic-medicine",
+          "name": "Psychiatry & Neurology Psychosomatic Medicine",
+          "description": "Psychosomatic Medicine is subspecialty in the diagnosis and treatment of psychiatric disorders and symptoms in complex medically ill patients. This subspecialty includes treatment of patients with acute or chronic medical, neurological, obstetrical or surgical illness in which psychiatric illness is affecting their medical care and/or quality of life such as HIV infection, organ transplantation, heart disease, renal failure, cancer, stroke, traumatic brain injury, high-risk pregnancy and COPD, among others. Patients also may be those who have a psychiatric disorder that is the direct consequence of a primary medical condition, or a somatoform disorder or psychological factors affecting a general medical condition. Psychiatrists specializing in Psychosomatic Medicine provide consultation-liaison services in general medical hospitals, attend on medical psychiatry inpatient units, and provide collaborative care in primary care and other outpatient settings.",
+          "category": "medical",
+          "actor": "Psychiatry & Neurology Psychosomatic Medicine",
+          "actors": "Psychiatry & Neurology Psychosomatic Medicines"
+        },
+        {
+          "uid": "psychiatrist",
+          "name": "Psychiatry",
+          "description": "Specializes in the diagnosis and treatment of mental disorders.",
+          "category": "medical",
+          "actor": "Psychiatrist",
+          "actors": "Psychiatrists"
+        },
+        {
+          "uid": "child-psychiatrist",
+          "name": "Child & Adolescent Psychiatry",
+          "description": "Specializes in the diagnosis and treatment of children's mental disorders.",
+          "category": "medical",
+          "actor": "Child Psychiatrist",
+          "actors": "Child Psychiatrists"
+        },
+        {
+          "uid": "psychiatry-neurology-pain-medicine",
+          "name": "Psychiatry & Neurology Pain Medicine",
+          "description": "A neurologist, child neurologists or psychiatrist who provides a high level of care, either as a primary physician or consultant, for patients experiencing problems with acute, chronic or cancer pain in both hospital and ambulatory settings. Patient care needs may also be coordinated with other specialists.",
+          "category": "medical",
+          "actor": "Psychiatry & Neurology Pain Medicine",
+          "actors": "Psychiatry & Neurology Pain Medicines"
+        },
+        {
+          "uid": "neurology-physical-therapist",
+          "name": "Neurology Physical Therapy",
+          "description": "Specializes in nervous system physical therapy.",
+          "category": "medical",
+          "actor": "Neurology Physical Therapist",
+          "actors": "Neurology Physical Therapists"
+        }
+      ],
+      "licenses": [
+        {
+          "number": "MD23516",
+          "state": "OR"
+        }
+      ],
+      "uid": "52055f042111507c307630b9c187fb82",
+      "npi": "1659363190"
+    }
+  ]
+}

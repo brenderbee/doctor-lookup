@@ -1,3 +1,13 @@
+export function parsePortlandOffices(practices) {
+  let portlandOffices = [];
+  practices.forEach(function(practice) {
+    if (practice.location_slug === 'or-portland') {
+      portlandOffices.push(practice);
+    }
+  });
+  return portlandOffices;
+}
+
 class API {
 
   requestConditionAPI(inputCondition) {
