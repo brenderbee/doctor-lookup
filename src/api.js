@@ -8,6 +8,14 @@ export function parsePortlandOffices(practices) {
   return portlandOffices;
 }
 
+export function checkWebsite (object) {
+  if (object.website === null || object.website === "") {
+    return "n/a";
+  } else {
+    return object.website;
+  }
+}
+
 class API {
 
   requestConditionAPI(inputCondition) {
