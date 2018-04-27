@@ -13,7 +13,6 @@ $(document).ready(function() {
 
     let inputCondition = $('#condition').val();
     let conditionCall = new API();
-
     let promiseCondition = conditionCall.requestConditionAPI(inputCondition);
 
     promiseCondition.then(function(response) {
@@ -21,17 +20,20 @@ $(document).ready(function() {
         $('.output').text('Your search returned no results.');
       } else {
         let responseDoctorsArray = response.data;
+
         responseDoctorsArray.forEach(function(doctor) {
           let practices = doctor.practices;
           let portlandOffices = parsePortlandOffices(practices);
           let website = checkWebsite(portlandOffices[0].website);
           let newPatients = portlandOffices[0].accepts_new_patients;
+          let officeName = portlandOffices[0].name;
           $('.output').append(
             `<div class="card">
               <div class="card-header">
                 <h3>${doctor.profile.first_name} ${doctor.profile.last_name}, ${doctor.profile.title}</h3>
               </div>
               <div class="card-body">
+                <h4>${officeName}</h4>
                 <p><strong>Phone Number:</strong></p>
                 <p>${portlandOffices[0].phones[0].number}</p>
                 <p><strong>Address:</strong></p>
@@ -55,7 +57,6 @@ $(document).ready(function() {
     event.preventDefault();
     let inputName = $('#name').val();
     let nameCall = new API();
-
     let promiseName = nameCall.requestNameAPI(inputName);
 
     promiseName.then(function(response) {
@@ -69,12 +70,15 @@ $(document).ready(function() {
           let portlandOffices = parsePortlandOffices(practices);
           let website = checkWebsite(portlandOffices[0].website);
           let newPatients = portlandOffices[0].accepts_new_patients;
+          let officeName = portlandOffices[0].name;
+
           $('.output').append(
             `<div class="card">
               <div class="card-header">
                 <h3>${doctor.profile.first_name} ${doctor.profile.last_name}, ${doctor.profile.title}</h3>
               </div>
               <div class="card-body">
+                <h4>${officeName}</h4>
                 <p><strong>Phone Number:</strong></p>
                 <p>${portlandOffices[0].phones[0].number}</p>
                 <p><strong>Address:</strong></p>
