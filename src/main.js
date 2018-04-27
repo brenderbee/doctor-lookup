@@ -15,18 +15,22 @@ $(document).ready(function() {
     let promiseCondition = conditionCall.requestConditionAPI(inputCondition);
 
     promiseCondition.then(function(response) {
-      let responsePracticesArray = response.data;
-      responsePracticesArray.forEach(function(practice) {
+      let responseDoctorsArray = response.data;
+      responseDoctorsArray.forEach(function(doctor) {
         $('.output').append(
           `<div class="card">
             <div class="card-header">
-              <h3>${practice.profile.first_name} ${practice.profile.last_name}, ${practice.profile.title}</h3>
+              <h3>${doctor.profile.first_name} ${doctor.profile.last_name}, ${doctor.profile.title}</h3>
             </div>
             <div class="card-body">
+              <p>Phone Number:</p>
+              <p></p>
+              <p>Address:</p>
+              <p>${doctor.practices[0].visit_address.street}</p>
+              <p>${doctor.practices[0].visit_address.city}, ${doctor.practices[0].visit_address.state} ${doctor.practices[0].visit_address.zip}</p>
             </div>
           </div>`
         );
-        console.log(practice);
       });
       }, function(error) {
       $('div.error').text('There has been an error: ' + error);
@@ -36,27 +40,29 @@ $(document).ready(function() {
 
   $('form.name button').click(function(event) {
     event.preventDefault();
-
+    debugger;
     let inputName = $('#name').val();
     let nameCall = new API();
-    console.log("inputName is " + inputName);
 
     let promiseName = nameCall.requestNameAPI(inputName);
-    console.log("promiseName is " + promiseName);
 
     promiseName.then(function(response) {
-      let responsePracticesArray = response.data;
-      responsePracticesArray.forEach(function(practice) {
+      let responseDoctorsArray = response.data;
+      responseDoctorsArray.forEach(function(doctor) {
         $('.output').append(
           `<div class="card">
             <div class="card-header">
-              <h3>${practice.profile.first_name} ${practice.profile.last_name}, ${practice.profile.title}</h3>
+              <h3>${doctor.profile.first_name} ${doctor.profile.last_name}, ${doctor.profile.title}</h3>
             </div>
             <div class="card-body">
+              <p>Phone Number:</p>
+              <p></p>
+              <p>Address:</p>
+              <p>${doctor.practices[0].visit_address.street}</p>
+              <p>${doctor.practices[0].visit_address.city}, ${doctor.practices[0].visit_address.state} ${doctor.practices[0].visit_address.zip}</p>
             </div>
           </div>`
         );
-        console.log(practice);
       });
       }, function(error) {
       $('div.error').text('There has been an error: ' + error);
