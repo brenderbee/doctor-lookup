@@ -23,9 +23,9 @@ $(document).ready(function() {
               <h3>${doctor.profile.first_name} ${doctor.profile.last_name}, ${doctor.profile.title}</h3>
             </div>
             <div class="card-body">
-              <p>Phone Number:</p>
-              <p></p>
-              <p>Address:</p>
+              <p><strong>Phone Number:</strong></p>
+              <p>${doctor.practices[0].phones[0].number}</p>
+              <p><strong>Address:</strong></p>
               <p>${doctor.practices[0].visit_address.street}</p>
               <p>${doctor.practices[0].visit_address.city}, ${doctor.practices[0].visit_address.state} ${doctor.practices[0].visit_address.zip}</p>
             </div>
@@ -55,9 +55,9 @@ $(document).ready(function() {
               <h3>${doctor.profile.first_name} ${doctor.profile.last_name}, ${doctor.profile.title}</h3>
             </div>
             <div class="card-body">
-              <p>Phone Number:</p>
-              <p></p>
-              <p>Address:</p>
+              <p><strong>Phone Number:</strong></p>
+              <p>${doctor.practices[0].phones[0].number}</p>
+              <p><strong>Address:</strong></p>
               <p>${doctor.practices[0].visit_address.street}</p>
               <p>${doctor.practices[0].visit_address.city}, ${doctor.practices[0].visit_address.state} ${doctor.practices[0].visit_address.zip}</p>
             </div>
