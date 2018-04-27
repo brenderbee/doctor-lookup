@@ -27,13 +27,17 @@ $(document).ready(function() {
           let portlandOffices = parsePortlandOffices(practices);
           let website = checkWebsite(portlandOffices[0].website);
           let newPatients = portlandOffices[0].accepts_new_patients;
+          let field = doctor.specialties[0].name;
+          let specialties = doctor.specialties[0].description;
 
           $('.output').append(
             `<div class="card doctor">
               <div class="card-header">
                 <h3>${doctor.profile.first_name} ${doctor.profile.last_name}, ${doctor.profile.title}</h3>
+                <h4>${field}</h4>
               </div>
               <div class="card-body">
+                <p><strong>${specialties}</strong></p>
                 <p>${doctor.profile.bio}</p>
                 <p><strong>Phone Number:</strong></p>
                 <p>${portlandOffices[0].phones[0].number}</p>
@@ -73,13 +77,17 @@ $(document).ready(function() {
           let portlandOffices = parsePortlandOffices(practices);
           let website = checkWebsite(portlandOffices[0].website);
           let newPatients = portlandOffices[0].accepts_new_patients;
+          let field = doctor.specialties[0].name;
+          let specialties = doctor.specialties[0].description;
 
           $('.output').append(
             `<div class="card doctor">
               <div class="card-header">
                 <h3>${doctor.profile.first_name} ${doctor.profile.last_name}, ${doctor.profile.title}</h3>
+                <h4>${field}</h4>
               </div>
               <div class="card-body">
+                <p><strong>${specialties}</strong></p>
                 <p>${doctor.profile.bio}</p>
                 <p><strong>Phone Number:</strong></p>
                 <p>${portlandOffices[0].phones[0].number}</p>
