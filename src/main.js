@@ -12,13 +12,11 @@ $(document).ready(function() {
     let inputCondition = $('#condition').val();
     let nameCall = new API();
 
-    let promise = nameCall.requestAPI(inputCondition);
+    let promiseCondition = nameCall.requestConditionAPI(inputCondition);
 
-    promise.then(function(response) {
+    promiseCondition.then(function(response) {
       let responsePracticesArray = response.data;
-
       responsePracticesArray.forEach(function(practice) {
-        let responseName = practice.profile;
         $('.output').append(
           `<div class="card">
             <div class="card-header">
