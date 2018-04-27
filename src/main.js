@@ -10,6 +10,7 @@ import { checkWebsite } from './api.js';
 $(document).ready(function() {
   $('form.condition button').click(function(event) {
     event.preventDefault();
+    $('.output').empty();
 
     let inputCondition = $('#condition').val();
     let conditionCall = new API();
@@ -28,7 +29,7 @@ $(document).ready(function() {
           let newPatients = portlandOffices[0].accepts_new_patients;
 
           $('.output').append(
-            `<div class="card">
+            `<div class="card doctor">
               <div class="card-header">
                 <h3>${doctor.profile.first_name} ${doctor.profile.last_name}, ${doctor.profile.title}</h3>
               </div>
@@ -55,6 +56,8 @@ $(document).ready(function() {
 
   $('form.name button').click(function(event) {
     event.preventDefault();
+    $('.output').empty();
+
     let inputName = $('#name').val();
     let nameCall = new API();
     let promiseName = nameCall.requestNameAPI(inputName);
@@ -72,7 +75,7 @@ $(document).ready(function() {
           let newPatients = portlandOffices[0].accepts_new_patients;
 
           $('.output').append(
-            `<div class="card">
+            `<div class="card doctor">
               <div class="card-header">
                 <h3>${doctor.profile.first_name} ${doctor.profile.last_name}, ${doctor.profile.title}</h3>
               </div>
