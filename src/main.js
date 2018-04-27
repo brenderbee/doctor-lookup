@@ -22,6 +22,7 @@ $(document).ready(function() {
           let practices = doctor.practices;
           let portlandOffices = parsePortlandOffices(practices);
           let website = checkWebsite(portlandOffices[0].website);
+          let newPatients = portlandOffices[0].accepts_new_patients;
           $('.output').append(
             `<div class="card">
               <div class="card-header">
@@ -34,6 +35,7 @@ $(document).ready(function() {
                 <p>${portlandOffices[0].visit_address.street}</p>
                 <p>${portlandOffices[0].visit_address.city}, ${portlandOffices[0].visit_address.state} ${portlandOffices[0].visit_address.zip}</p>
                 <p><strong>Website:</strong> ${website}</p>
+                <p><strong>Accepting new patients:</strong> ${newPatients}</p>
               </div>
             </div>`
           );
@@ -58,6 +60,7 @@ $(document).ready(function() {
         let practices = doctor.practices;
         let portlandOffices = parsePortlandOffices(practices);
         let website = checkWebsite(portlandOffices[0].website);
+        let newPatients = portlandOffices[0].accepts_new_patients;
         $('.output').append(
           `<div class="card">
             <div class="card-header">
@@ -70,6 +73,7 @@ $(document).ready(function() {
               <p>${portlandOffices[0].visit_address.street}</p>
               <p>${portlandOffices[0].visit_address.city}, ${portlandOffices[0].visit_address.state} ${portlandOffices[0].visit_address.zip}</p>
               <p><strong>Website:</strong> ${website}</p>
+              <p><strong>Accepting new patients:</strong> ${newPatients}</p>
             </div>
           </div>`
         );
