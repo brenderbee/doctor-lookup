@@ -15,35 +15,32 @@ $(document).ready(function() {
 
     let promiseCondition = conditionCall.requestConditionAPI(inputCondition);
 
-    promiseCondition.then(
-      function(response) {
+      promiseCondition.then(function(response) {
         let responseDoctorsArray = response.data;
         responseDoctorsArray.forEach(function(doctor) {
-          let portlandOffices = parsePortlandOffices(doctor.practices);
+          let practices = doctor.practices;
+          let portlandOffices = parsePortlandOffices(practices);
           $('.output').append(
             `<div class="card">
-            <div class="card-header">
-            <h3>${doctor.profile.first_name} ${doctor.profile.last_name}, ${doctor.profile.title}</h3>
-            </div>)`);
-            portlandOffices.forEach(function(office) {
-              $('.output').append(
-                `<div class="card-body">
+              <div class="card-header">
+                <h3>${doctor.profile.first_name} ${doctor.profile.last_name}, ${doctor.profile.title}</h3>
+              </div>
+              <div class="card-body">
                 <p><strong>Phone Number:</strong></p>
-                <p>${office.phones[0].number}</p>
+                <p>${portlandOffices[0].phones[0].number}</p>
                 <p><strong>Address:</strong></p>
-                <p>${office.visit_address.street}</p>
-                <p>${office.visit_address.city}, ${office.visit_address.state} ${office.visit_address.zip}</p>
-                </div>
-                </div>`
-              );
-            });
-          });
-        },
-
-        function(error) {
-          $('div.error').text('There has been an error: ' + error);
-          $('div.error').show();
+                <p>${portlandOffices[0].visit_address.street}</p>
+                <p>${portlandOffices[0].visit_address.city}, ${portlandOffices[0].visit_address.state} ${portlandOffices[0].visit_address.zip}</p>
+              </div>
+            </div>`
+          );
         });
+        }, function(error) {
+        $('div.error').text('There has been an error: ' + error);
+        $('div.error').show();
+      });
+    });
+
 
   // $('form.name button').click(function(event) {
   //   event.preventDefault();
