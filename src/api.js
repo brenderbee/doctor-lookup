@@ -8,11 +8,12 @@ export function parsePortlandOffices(practices) {
   return portlandOffices;
 }
 
-export function checkWebsite (object) {
-  if (object.website === null || object.website === "") {
-    return "n/a";
+export function checkWebsite (url) {
+  let error = "n/a";
+  if (url === null || url === "") {
+    return error;
   } else {
-    return object.website;
+    return url;
   }
 }
 
