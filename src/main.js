@@ -5,6 +5,7 @@ import './styles.css';
 
 import { API } from './api.js';
 import { parsePortlandOffices } from './api.js';
+import { Data } from './data.js';
 
 $(document).ready(function() {
   $('form.condition button').click(function(event) {
@@ -13,38 +14,45 @@ $(document).ready(function() {
 
     let inputCondition = $('#condition').val();
     let conditionCall = new API();
+    let dataParse = new Data();
     let promiseCondition = conditionCall.requestConditionAPI(inputCondition);
 
     promiseCondition.then(function(response) {
-      if (response.meta.total === 0) {
+      if (dataParse.getResultsCount(response) === 0) {
         $('.output').text('Your search returned no results.');
       } else {
-        let responseDoctorsArray = response.data;
+        let responseDoctorsArray = dataParse.getDoctors(response);
 
         responseDoctorsArray.forEach(function(doctor) {
-          let practices = doctor.practices;
+          let practices = dataParse.getPractices(doctor);
           let portlandOffices = parsePortlandOffices(practices);
-          let website = checkWebsite(portlandOffices[0].website);
-          let newPatients = portlandOffices[0].accepts_new_patients;
-          let field = doctor.specialties[0].name;
-          let specialties = doctor.specialties[0].description;
+          let firstPortlandOffice = portlandOffices[0];
+          let fields = dataParse.getFields(doctor).join(', ');
+          let specialties = dataParse.getSpecialties(doctor).join(' ');
+          let fullName = `${dataParse.getFirstName(doctor)} ${dataParse.getLastName(doctor)}, ${dataParse.getTitle(doctor)}`
+          let bio = dataParse.getBio(doctor);
+          let phones = dataParse.getPhones(firstPortlandOffice).join(', ');
+          let streetAddress = dataParse.getStreetAddress(firstPortlandOffice);
+          let addressCityStateZip = dataParse.getCityStateZipAddress(firstPortlandOffice);
+          let website = dataParse.getWebsite(firstPortlandOffice);
+          let newPatients = dataParse.getAcceptingPatients(firstPortlandOffice);
 
           $('.output').append(
             `<div class="card doctor">
               <div class="card-header">
-                <h3>${doctor.profile.first_name} ${doctor.profile.last_name}, ${doctor.profile.title}</h3>
-                <h4>${field}</h4>
+                <h3>${fullName}</h3>
+                <h4>${fields}</h4>
               </div>
               <div class="card-body">
                 <p><strong>${specialties}</strong></p>
-                <p>${doctor.profile.bio}</p>
+                <p>${bio}</p>
                 <p><strong>Phone Number:</strong></p>
-                <p>${portlandOffices[0].phones[0].number}</p>
+                <p>${phones}</p>
                 <p><strong>Address:</strong></p>
-                <p>${portlandOffices[0].visit_address.street}</p>
-                <p>${portlandOffices[0].visit_address.city}, ${portlandOffices[0].visit_address.state} ${portlandOffices[0].visit_address.zip}</p>
+                <p>${streetAddress}</p>
+                <p>${addressCityStateZip}</p>
                 <p><strong>Website:</strong> ${website}</p>
-                <p><strong>Accepting new patients:</strong> ${newPatients}</p>
+                <h4>${newPatients}</h4>
               </div>
             </div>`
           );
