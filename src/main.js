@@ -5,7 +5,6 @@ import './styles.css';
 
 import { API } from './api.js';
 import { parsePortlandOffices } from './api.js';
-import { checkWebsite } from './api.js';
 
 $(document).ready(function() {
   $('form.condition button').click(function(event) {
