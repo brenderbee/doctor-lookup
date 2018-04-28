@@ -5,7 +5,9 @@ import './styles.css';
 
 import { API } from './api.js';
 import { parsePortlandOffices } from './api.js';
-import { Data } from './data.js';
+import { Response } from './response.js';
+import { Doctor } from './doctor.js';
+import { Office } from './office.js';
 
 $(document).ready(function() {
   $('form.condition button').click(function(event) {
@@ -14,28 +16,30 @@ $(document).ready(function() {
 
     let inputCondition = $('#condition').val();
     let conditionCall = new API();
-    let dataParse = new Data();
+    let responseInfo = new Response();
+    let doctorInfo = new Doctor();
+    let officeInfo = new Office();
     let promiseCondition = conditionCall.requestConditionAPI(inputCondition);
 
     promiseCondition.then(function(response) {
-      if (dataParse.getResultsCount(response) === 0) {
+      if (responseInfo.getResultsCount(response) === 0) {
         $('.output').text('Your search returned no results.');
       } else {
-        let responseDoctorsArray = dataParse.getDoctors(response);
+        let responseDoctorsArray = responseInfo.getDoctors(response);
 
         responseDoctorsArray.forEach(function(doctor) {
-          let practices = dataParse.getPractices(doctor);
+          let practices = doctorInfo.getPractices(doctor);
           let portlandOffices = parsePortlandOffices(practices);
           let firstPortlandOffice = portlandOffices[0];
-          let fields = dataParse.getFields(doctor).join(', ');
-          let specialties = dataParse.getSpecialties(doctor).join(' ');
-          let fullName = `${dataParse.getFirstName(doctor)} ${dataParse.getLastName(doctor)}, ${dataParse.getTitle(doctor)}`
-          let bio = dataParse.getBio(doctor);
-          let phones = dataParse.getPhones(firstPortlandOffice).join(', ');
-          let streetAddress = dataParse.getStreetAddress(firstPortlandOffice);
-          let addressCityStateZip = dataParse.getCityStateZipAddress(firstPortlandOffice);
-          let website = dataParse.getWebsite(firstPortlandOffice);
-          let newPatients = dataParse.getAcceptingPatients(firstPortlandOffice);
+          let fields = doctorInfo.getFields(doctor).join(', ');
+          let specialties = doctorInfo.getSpecialties(doctor).join(' ');
+          let fullName = `${doctorInfo.getFirstName(doctor)} ${doctorInfo.getLastName(doctor)}, ${doctorInfo.getTitle(doctor)}`
+          let bio = doctorInfo.getBio(doctor);
+          let phones = officeInfo.getPhones(firstPortlandOffice).join(', ');
+          let streetAddress = officeInfo.getStreetAddress(firstPortlandOffice);
+          let addressCityStateZip = officeInfo.getCityStateZipAddress(firstPortlandOffice);
+          let website = officeInfo.getWebsite(firstPortlandOffice);
+          let newPatients = officeInfo.getAcceptingPatients(firstPortlandOffice);
 
           $('.output').append(
             `<div class="card doctor">
