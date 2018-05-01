@@ -5,7 +5,6 @@ import './styles.css';
 
 import { API } from './api.js';
 import { parsePortlandOffices } from './api.js';
-import { Response } from './response.js';
 import { Doctor } from './doctor.js';
 import { Office } from './office.js';
 
@@ -22,19 +21,19 @@ $(document).ready(function() {
     let promiseCondition = conditionCall.requestConditionAPI(inputCondition);
 
     promiseCondition.then(function(response) {
-      if (responseInfo.getResultsCount(response) === 0) {
+      if (response.meta.total === 0) {
         $('.output').text('Your search returned no results.');
       } else {
-        let responseDoctorsArray = responseInfo.getDoctors(response);
+        let responseDoctorsArray = response.data;
 
         responseDoctorsArray.forEach(function(doctor) {
-          let practices = doctorInfo.getPractices(doctor);
+          let practices = doctor.practices;
           let portlandOffices = parsePortlandOffices(practices);
           let firstPortlandOffice = portlandOffices[0];
           let fields = doctorInfo.getFields(doctor).join(', ');
           let specialties = doctorInfo.getSpecialties(doctor).join(' ');
-          let fullName = `${doctorInfo.getFirstName(doctor)} ${doctorInfo.getLastName(doctor)}, ${doctorInfo.getTitle(doctor)}`
-          let bio = doctorInfo.getBio(doctor);
+          let fullName = `${doctor.profile.first_name} ${doctor.profile.last_name}, ${doctor.profile.title}`
+          let bio = doctor.profile.bio;
           let phones = officeInfo.getPhones(firstPortlandOffice).join(', ');
           let streetAddress = officeInfo.getStreetAddress(firstPortlandOffice);
           let addressCityStateZip = officeInfo.getCityStateZipAddress(firstPortlandOffice);
@@ -78,19 +77,19 @@ $(document).ready(function() {
     let promiseName = nameCall.requestNameAPI(inputName);
 
     promiseName.then(function(response) {
-      if (responseInfo.getResultsCount(response) === 0) {
+      if (response.meta.total === 0) {
         $('.output').text('Your search returned no results.');
       } else {
-        let responseDoctorsArray = responseInfo.getDoctors(response);
+        let responseDoctorsArray = response.data;
 
         responseDoctorsArray.forEach(function(doctor) {
-          let practices = doctorInfo.getPractices(doctor);
+          let practices = doctor.practices;
           let portlandOffices = parsePortlandOffices(practices);
           let firstPortlandOffice = portlandOffices[0];
           let fields = doctorInfo.getFields(doctor).join(', ');
           let specialties = doctorInfo.getSpecialties(doctor).join(' ');
-          let fullName = `${doctorInfo.getFirstName(doctor)} ${doctorInfo.getLastName(doctor)}, ${doctorInfo.getTitle(doctor)}`
-          let bio = doctorInfo.getBio(doctor);
+          let fullName = `${doctor.profile.first_name} ${doctor.profile.last_name}, ${doctor.profile.title}`
+          let bio = doctor.profile.bio;
           let phones = officeInfo.getPhones(firstPortlandOffice).join(', ');
           let streetAddress = officeInfo.getStreetAddress(firstPortlandOffice);
           let addressCityStateZip = officeInfo.getCityStateZipAddress(firstPortlandOffice);
